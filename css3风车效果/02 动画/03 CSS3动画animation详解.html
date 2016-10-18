@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 动画</title>
+	<style>
+		html, body {
+			height: 100%;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #F7F7F7;
+		}
+
+		.box {
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			/*执行动画的名称*/
+			animation-name:orbit ;
+			/*
+			执行动画的持续时间
+			*/
+			animation-duration: 3s;
+			/*动画的速度*/
+			animation-timing-function: linear;
+			/*
+				动画的延迟时间
+			*/
+			animation-delay: 0s;
+			/*
+				动画执行的次数
+				iteration 迭代
+				count 次数
+				infinite  无数次
+			*/
+			animation-iteration-count:2;
+			/*动画的方向
+			direction
+			*/
+			/*
+				1:alternate 动画先正常运行再反方向运行，并交替运行
+				2:reverse 反方向运行
+				3：normal
+				alternate ：会受动画的次数影响，如果动画执行的是无数次，
+		这个动画持续交替运行。
+			*/
+			animation-direction:alternate;
+			/*
+				 第七个参数。
+				 forwards  动画的状态为结束时候的状态
+				 backwards 动画的状态为开始的时候的状态。
+			*/
+			animation-fill-mode: backwards;
+			/*
+			      暂停动画，开始动画
+			      paused  暂停状态
+			*/
+		   /*	animation-play-state:
+		    ;*/
+			animation-play-state:running;
+
+		}
+
+		.box:hover {
+			/*!*设置动画暂停*!
+			animation-play-state: paused;*/
+		}
+        /*
+          	定义动画  orbit  轨道
+        */
+		@keyframes orbit {
+				/*
+						定义动画 的第一种写法
+				/*from{
+
+				}to{
+				}*/
+				/*
+				  假设我在这里定义了这个动画，我在上面要使用这个动画，
+		指定这个动画的执行时间，假设我是指定10s 完成这个动画，0秒
+		第五秒执行50%，结束的时候执行 100
+
+				*/
+			    0%{
+					width:200px;
+					width:200px;
+				}
+				/*50%{
+					width: 400px;
+					height: 400px;
+				}*/
+			    100%{
+					width: 400px;
+					height: 400px;
+			    }
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

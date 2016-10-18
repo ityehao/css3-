@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+            /*
+				边框颜色 #394057
+				#C90;
+				背景色：080e24；
+            */
+            body{
+                 margin: 0;
+                 padding: 0;
+                 background-color:#080e24 ;
+                 overflow: hidden;
+            }
+            ul{
+                 list-style: none;
+                 margin: 0;
+                 padding: 0;
+                 width: 600px;
+                 height: 600px;
+                 margin: 10px auto;
+
+            }
+            ul li{
+                  border-radius: 50%;
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  transform:translate(-50%,-50%);
+                  border: 1px solid #394057;
+                /*  animation: change 20s linear infinite;*/
+                  /*提炼一下代码*/
+                  animation-name: change;
+                  animation-timing-function: linear;
+                  animation-iteration-count: infinite;
+
+            }
+
+
+
+            li:nth-child(1){
+                  width:60px;
+                  height: 60px;
+                  background-color: #C90;
+                  box-shadow: 0px 0px 50px #c90;
+                  animation-duration: 3s;
+            }
+            li:nth-child(2){
+                 width:120px;
+                 height: 120px;
+                animation-duration: 5s;
+            }
+            li:nth-child(3){
+                width:180px;
+                height: 180px;
+                animation-duration: 7s;
+            }
+            li:nth-child(4){
+                width:240px;
+                height: 240px;
+                animation-duration: 10s;
+            }
+            li:nth-child(5){
+                width:300px;
+                height: 300px;
+                animation-duration: 15s;
+            }
+            li:nth-child(6){
+                width:360px;
+                height: 360px;
+                animation-duration: 17s;
+            }
+            li:nth-child(7){
+                width:420px;
+                height: 420px;
+                animation-duration:20s;
+            }
+            li:nth-child(8){
+                width:480px;
+                height: 480px;
+                animation-duration:11s;
+            }
+            li:nth-child(9){
+                width:540px;
+                height: 540px;
+                animation-duration:14s;
+            }
+            li:nth-child(10){
+                width:600px;
+                height: 600px;
+                animation-duration:19s;
+             }
+
+             li>span{
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 1px solid #ccc;
+                opacity: 0.3;
+                 left: 50%;
+                 margin-top: -5px;
+            }
+            li:nth-child(2) span{
+                 background-color: #0da5d6;
+
+
+            }
+            li:nth-child(3) span{
+                background-color: #c90;
+            }
+            li:nth-child(4) span{
+                background-color: #ccc;
+            }
+            li:nth-child(5) span{
+                background-color: #2AB561;
+            }
+            li:nth-child(6) span{
+                background-color:cornflowerblue;
+            }
+            li:nth-child(7) span{
+                background-color:antiquewhite;
+            }
+            li:nth-child(8) span{
+                background-color:cadetblue;
+            }
+            li:nth-child(9) span{
+                background-color:darkblue;
+            }
+            li:nth-child(10) span{
+                background-color:#FFCB48;
+            }
+
+            @keyframes change {
+                      from{
+                          transform: translate(-50% ,-50%) rotate(0deg);
+                      }
+                      to{
+                          transform: translate(-50% ,-50%) rotate(360deg);
+                      }
+                  }
+
+    </style>
+</head>
+<body>
+        <ul>
+            <li></li>
+            <li>
+                <span></span>
+            </li>
+            <li><span></span></li>
+            <li> <span></span></li>
+            <li> <span></span></li>
+            <li> <span></span></li>
+            <li> <span></span></li>
+            <li> <span></span></li>
+            <li> <span></span></li>
+            <li> <span></span></li>
+        </ul>
+</body>
+</html>

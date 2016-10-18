@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 动画</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #F7F7F7;
+		}
+
+		.box {
+			width: 400px;
+			margin: 100px auto;
+			/*使用动画
+			infinite 无数次
+			*/
+			animation: change 2s ease infinite;
+		}
+		.box img {
+			width: 100%;
+		}
+		/*
+				1：定义动画
+				   我们使用一个关键字，我们可以设置一些状态。
+				   keyframes
+				2：使用动画。
+				animation
+		*/
+		@keyframes change {
+				from
+				{
+					 transform:rotate(0deg) scale(1);
+				}
+			    to
+				{
+					transform:rotate(360deg) scale(2);
+			        opacity: 0.4;
+				}
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="./images/fengche.png">
+	</div>
+</body>
+</html>
